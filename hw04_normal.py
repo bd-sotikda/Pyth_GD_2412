@@ -51,3 +51,25 @@ line_2 = 'mtMmEZUOmcqWiryMQhhTxqKdSTKCYEJlEZCsGAMkgAYEOmHBSQsSUHKvSfbmxULaysm'\
 # 2500-значное произвольное число.
 # Найдите и выведите самую длинную последовательность одинаковых цифр
 # в вышезаполненном файле.
+
+print('-'*80)
+print('Задача 1')
+
+import re
+pattern = '[a-z]+'
+print(re.findall(pattern, line))
+
+line3 = 'mtMmEZUOmcqWiryMQhhTxqKdSTKCYEJlEZCsGAMkgAYEOmHBSQsSUHKvSfbmxULaysmNO'
+
+L2 = ''
+L1 = [L2+l for l in line3 if 'a' < l < 'z']
+print('L1 = ', L1)
+
+print('L2 = ', L2)
+
+print('Задача 1 завершена')
+print('-'*80)
+print('Задача 2')
+pattern = '(?<=[a-z]{2})([A-Z]{2})(?=[A-Z]{2})'
+print(re.findall(pattern, line_2))
+
